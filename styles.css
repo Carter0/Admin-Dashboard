@@ -1,20 +1,83 @@
 body {
     margin: 0;
     padding: 0;
+    background-color: lightgray;
 }
 
 .container {
     display: grid;
     grid-template-columns: 0.5fr 2fr 1fr;
-    grid-template-rows: 0.5fr 1fr 1fr;
+    grid-template-rows: 0.3fr 1fr 1fr;
     gap: 20px;
 
     min-height: 100dvh;
 }
 
+/* Header */
+
 .header {
     grid-column: 2 / 4;
     grid-row: 1 / 2;
+
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+
+    /* Override the gap from the grid */
+    margin-left: -20px;
+    padding: 2rem;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1rem;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.searchbar-container {
+    width: 100%;
+}
+
+.searchbar-container>span {
+    margin-right: 8px;
+}
+
+.searchbar-container>input {
+    border-radius: 1rem;
+    border: none;
+    background-color: lightgray;
+    height: 1.25rem;
+    width: 75%;
+}
+
+
+.header-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-name>h4,
+.header-name>h2 {
+    margin: 0px;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.header-buttons>button {
+    background-color: #3385ff;
+    border-radius: 1rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    color: white;
+    border: none;
 }
 
 
